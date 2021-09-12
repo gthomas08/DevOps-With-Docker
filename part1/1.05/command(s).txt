@@ -1,0 +1,11 @@
+$ docker pull devopsdockeruh/simple-web-service:ubuntu
+
+$ docker pull devopsdockeruh/simple-web-service:alpine
+
+$ docker images
+
+$ docker run -d --rm -it --name secret-msg devopsdockeruh/simple-web-service:alpine
+
+$ docker exec -it secret-msg sh
+/usr/src/app # tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
